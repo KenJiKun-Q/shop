@@ -1,1 +1,45 @@
 /* pages/classify/index.wxss */
+.category{
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  top: 100rpx;
+  bottom: 0;
+}
+
+.menu{
+  background: #f4f4f4;
+  width: 200rpx;
+  height: 100%;
+  overflow-y: auto;
+
+}
+
+.tabList{
+  height: 100rpx;
+  text-align: center;
+  line-height: 100rpx;
+  border-bottom: 1px solid #f1f1f1;
+}
+
+.active{
+  color: #fe2c4b;
+  background: #ffffff;
+  position: relative;
+}
+
+.active::before{
+  display: block;
+  content: "";
+  width: 5px;
+  height: 60rpx;
+  background: #fe2c4b;
+  position: absolute;
+  top: 20rpx;
+  left: 0;
+}
+
+.brand{
+  flex: 1;
+}
+

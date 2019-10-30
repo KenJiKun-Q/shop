@@ -1,0 +1,7 @@
+<!--components/search/index.wxml-->
+<!-- 头部搜索 -->
+<view class="search">
+  <input placeholder="搜索"></input>
+  <image src="../../images/icon_search@2x.png"></image>
+</view>
+

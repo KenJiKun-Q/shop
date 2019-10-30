@@ -1,9 +1,4 @@
-<!-- 头部搜索 -->
-<view class="search">
-  <input placeholder="搜索"></input>
-  <image src="../../images/icon_search@2x.png"></image>
-</view>
-
+<search/>
 
 <!-- 轮播图 -->
 <swiper autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" indicator-dots="indicator">
