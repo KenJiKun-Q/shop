@@ -39,7 +39,34 @@
   left: 0;
 }
 
-.brand{
+.content{
   flex: 1;
+  padding: 20rpx;
+  overflow-y: auto;
 }
 
+.brand-title{
+  text-align: center;
+  margin: 20rpx 0;
+}
+
+.brands{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.brands-item{
+  width: 33.33%;
+  padding: 20rpx;
+  box-sizing: border-box;
+}
+
+.brands-item image{
+  width: 120rpx;
+  max-height: 120rpx;
+}
+
+.brands-name{
+  text-align: center;
+  font-size: 12px;
+}
