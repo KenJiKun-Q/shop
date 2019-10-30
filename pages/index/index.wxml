@@ -1,0 +1,52 @@
+<!-- 头部搜索 -->
+<view class="search">
+  <input placeholder="搜索"></input>
+  <image src="../../images/icon_search@2x.png"></image>
+</view>
+
+
+<!-- 轮播图 -->
+<swiper autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" indicator-dots="indicator">
+  <block wx:for="{{lunbo}}" wx:key="{{index}}">
+    <swiper-item class="lunbo">
+      <image src="{{item.image_src}}"></image>
+    </swiper-item>
+  </block>
+</swiper>
+
+
+<!-- 导航栏 -->
+<view class="navlist">
+  <view wx:for="{{navlist}}" wx:key="{{index}}">
+    <navigator url="{{item[0].navigator_url}}">
+      <image src="{{item.image_src}}"></image>
+    </navigator>
+  </view>
+</view>
+
+
+<!-- 楼层 -->
+<view
+ class="floor"
+  wx:for="{{floor}}"
+  wx:key="{{index}}">
+  <view class="floor-title">
+    <image mode="aspectFit" src="{{item.floor_title.image_src}}"></image>
+  </view>
+
+  <view class="floor-nav">
+    <view class="floor-left">
+      <image src="{{item.product_list[0].image_src}}"></image>
+    </view>
+
+
+    <view class="floor-right">
+      <view
+       wx:for="{{item.product_list}}"
+       wx:key="{{index}}"
+       wx:if="{{index > 0}}">
+        <image src="{{item.image_src}}"></image>
+      </view>
+    </view>
+  </view>
+</view>
