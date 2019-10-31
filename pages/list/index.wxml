@@ -1,0 +1,30 @@
+<!-- 头部搜索 -->
+<view class="search">
+  <input placeholder="搜索" value="{{query}}"></input>
+  <image src="../../images/icon_search@2x.png"></image>
+</view>
+
+
+<view class="good-list">
+  <view class="screen">
+    <view class="actvie">综合</view>
+    <view>销量</view>
+    <view>价格</view>
+  </view>
+  <view class="shop">
+    <navigator
+     url="/pages/detail/index?goods_id={{item.goods_id}}" 
+     class="shop-list"
+     wx:for="{{list}}"
+     wx:key="{{index}}">
+      <image mode="aspectFill" src="{{item.goods_small_logo}}"></image>
+      <view class="shop-content">
+        <view class="shop-title">{{item.goods_name}}</view>
+        <view class="shop-price">￥{{item.goods_price}}</view>
+      </view>
+    </navigator>
+
+    <view class="loading" wx:if="{{hasMore}}">正在加载...</view>
+    <view class="loading" wx:if="{{!hasMore}}">没有更多数据</view>
+  </view>
+</view>

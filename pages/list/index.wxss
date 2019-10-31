@@ -1,0 +1,74 @@
+/* components/search/index.wxss */
+.search{
+  padding: 20rpx;
+  background: #eeeeee;
+  position: relative;
+}
+.search input{
+  background: #ffffff;
+  height: 60rpx;
+  border-radius: 50rpx;
+  padding: 0 70rpx;
+}
+.search image{
+  width: 32rpx;
+  height: 32rpx;
+  position:absolute;
+  top: 35rpx;
+  left: 40rpx;
+}
+
+.screen{
+  display: flex;
+  justify-content: space-around;
+  padding: 30rpx;
+  border-bottom: 1px solid #eeeeee;
+  font-size: 17px;
+}
+
+.actvie{
+  color: red;
+}
+
+.shop{
+  padding: 30rpx 20rpx;
+  
+}
+
+.shop-list{
+  display: flex;
+  padding: 31rpx 0;
+  border-bottom: 1px solid #eee;
+}
+
+.shop-list image{
+  width: 200rpx;
+  height: 200rpx;
+}
+
+.shop-content{
+  flex: 2;
+  padding-left: 20rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.shop-title{
+  overflow: hidden;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  box-orient: vertical;
+  display: -webkit-box;
+  display: box;
+}
+
+.shop-price{
+  color: #fe2c4b
+}
+
+.loading{
+  padding: 20rpx;
+  text-align: center;
+}

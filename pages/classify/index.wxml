@@ -29,7 +29,7 @@
       <view class="brands">
         <navigator
         class="brands-item"
-        url=""
+        url="/pages/list/index?query={{item.cat_name}}"
         wx:for="{{item.children}}"
         wx:key="{{index}}">
           <image src="{{item.cat_icon}}" mode="aspectFill"></image>

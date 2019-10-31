@@ -1,0 +1,50 @@
+<view class="fengmian">
+    <swiper indicator-dots class="swiper">
+        <block wx:for="{{detail.pics}}" wx:key="{{index}}">
+          <swiper-item>
+            <image mode="aspectFill" src="{{item.pics_big}}"></image>
+          </swiper-item>
+        </block>
+    </swiper>
+    <view>
+      <view class="price">￥{{detail.goods_price}}</view>
+        <view class="content">
+          <view class="content-name">
+            {{detail.goods_name}}
+          </view>
+
+        <view class="collect">
+          <view class="iconfont icon-shoucang"></view>
+          <view>收藏</view>
+        </view>
+    </view>
+    </view>
+</view>
+
+<view class="express">快递: 免邮费</view>
+
+<!-- 详情页 -->
+<rich-text nodes="{{detail.goods_introduce}}" bindtap="tap"></rich-text>
+
+<!-- 底部按钮 -->
+<view class="footer">
+  <!-- 打开客服窗口,并且隐藏覆盖在按钮上 -->
+  <button class="contact" open-type="contact" >微信客服</button>
+  <view class="btn-left">
+    <view class="iconfont icon-kefu"></view>
+    <view>联系客服</view>
+  </view>
+
+  <navigator url="/pages/car/index" open-type="switchTab" class="btn-left">
+    <view class="iconfont icon-gouwuche"></view>
+    <view>购物车</view>
+  </navigator>
+
+  <view class="btn-right">
+    加入购物车
+  </view>
+
+  <view class="btn-right">
+    立即购买
+  </view>
+</view>

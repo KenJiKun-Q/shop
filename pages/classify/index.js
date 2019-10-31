@@ -24,7 +24,7 @@ Page({
       url:"/api/public/v1/categories"
     }).then(res => {
       let {message} = res.data
-      console.log(message)
+
       this.setData({
         list:message
       })
