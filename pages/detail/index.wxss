@@ -85,3 +85,7 @@
   height:100rpx;
   opacity: 0;
 }
+
+.detail{
+  padding-bottom: 100rpx;
+}

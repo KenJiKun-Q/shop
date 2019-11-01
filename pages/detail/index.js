@@ -23,7 +23,7 @@ Page({
       }
     }).then(res => {
       let {message} = res.data
-      console.log(message)
+      // console.log(message)
 
       message.goods_price = Number(message.goods_price).toFixed(2)
 

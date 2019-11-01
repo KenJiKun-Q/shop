@@ -1,0 +1,56 @@
+/* pages/search/index.wxss */
+.searchInput{
+  background: #eeeeee;
+}
+
+.content{
+  display: flex;
+  padding: 25rpx 20rpx;
+}
+
+.searchInput input{
+  flex: 9;
+  background: #ffffff;
+  height: 60rpx;
+  margin-right: 20rpx;
+  position: relative;
+  padding-left: 60rpx;
+  border-radius: 4px;
+}
+
+.searchFont{
+  position: absolute;
+  top: 14rpx;
+  left:15rpx;
+}
+
+.inputCancel{
+  flex: 3;
+  text-align: center;
+  border: 1px solid #dedede;
+  box-sizing: border-box;
+  height: 58rpx;
+  line-height: 58rpx;
+  border-radius: 4px;
+}
+
+.history{
+  padding: 20rpx;
+}
+
+.historySearch{
+  display: flex;
+  justify-content: space-between;
+  line-height: 21rpx;
+}
+
+.historyName{
+  display: flex;
+  flex-wrap: wrap;
+}
+.historyName navigator{
+  background: #eeeeee;
+  margin: 10rpx;
+  box-sizing: border-box;
+  padding: 13rpx 15rpx;
+}

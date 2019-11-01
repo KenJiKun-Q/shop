@@ -1,2 +1,47 @@
-<!--pages/car/index.wxml-->
-<text>pages/car/index.wxml</text>
+
+<view class="addressInfo">
+  <view class="content">
+    <view class="addressName">收货人: 王晓东</view>
+    <view class="addressPhone">联系电话: 13800000000
+      <text> > </text>
+    </view>
+  </view>
+  <view class="address">
+    收货地址: 广东
+  </view>
+</view>
+
+<image 
+  mode="aspectFill"
+  src="../../images/cart_border@2x.png"
+  class="subfield"
+></image>
+
+<view class="live">
+  <view class="iconfont icon-dianpu"></view>
+  <view>优购生活馆</view>
+</view>
+
+
+<view class="cart-list">
+  <view class="font-icon">
+    <icon type="success" size="15"></icon>
+  </view>
+  <view class="cart-Trade">
+   <image
+    mode="aspectFill" 
+    src="https://t00img.yangkeduo.com/goods/images/2018-12-03/c3af8ddf0744c071be4a6e958094545f.jpeg">
+    </image>
+    <view class="box-Config">
+      <view class="trade-title">卡拉胶收到了卡视角阿卡丽四大皆空拉丝机打卡拉斯卡拉斯科栏点击</view>
+      <view class="price-Config">
+        <view class="trade-price">￥279.00</view>
+            <view class="amount">
+            <view class="reduce">-</view>
+            <view class="number">3</view>
+            <view class="add">+</view>
+        </view>
+    </view>
+    </view>
+  </view>
+</view>

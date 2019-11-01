@@ -24,7 +24,11 @@
 <view class="express">快递: 免邮费</view>
 
 <!-- 详情页 -->
-<rich-text nodes="{{detail.goods_introduce}}" bindtap="tap"></rich-text>
+<view class="detail">
+  <rich-text
+   nodes="{{detail.goods_introduce}}" 
+   bindtap="tap"></rich-text>
+</view>
 
 <!-- 底部按钮 -->
 <view class="footer">
