@@ -1,3 +1,5 @@
+/* 地址部分 */
+
 .addressInfo{
   padding: 50rpx 20rpx;
 }
@@ -29,17 +31,26 @@
 }
 
 
+/* 产品部分 */
+.shop-list{
+  padding-bottom: 100rpx;
+}
+
 .cart-list{
   display: flex;
+  padding: 20rpx;
+  border-bottom: 1px solid #dddddd;
 }
 
 .font-icon{
   flex: 1;
+  margin: auto;
 }
 
 .cart-Trade{
   flex: 11;
   display: flex;
+
 }
 
 .cart-Trade image{
@@ -49,4 +60,101 @@
 
 .box-Config{
   flex: 1;
+  padding-left: 20rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.trade-title{
+  text-overflow: -o-ellipsis-lastline;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.trade-price{
+  color: #fe2c4b;
+}
+
+.price-Config{
+  display: flex;
+  justify-content: space-between;
+}
+
+.amount{
+  display: flex;
+}
+
+.amount view{
+  margin-left: 20rpx;
+}
+
+.reduce{
+  border: 1px solid #dddddd;
+  width: 40rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  text-align: center;
+}
+
+.add{
+  border: 1px solid #dddddd;
+  width: 40rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  text-align: center;
+}
+
+
+/* 底部按钮 */
+.footer-nav{
+  display: flex;
+  width: 100%;
+  height: 100rpx;
+  position: fixed;
+  bottom: 0rpx;
+  left: 0rpx;
+  background: #fff;
+}
+
+.all{
+  flex: 4;
+  margin: auto 0;
+}
+
+.all icon{
+  padding: 0 30rpx;
+}
+
+.all-price{
+  flex: 4;
+  margin: auto;
+}
+
+.all-content{
+  display: flex;
+}
+
+.allPrice{
+  color: red;
+}
+
+.express{
+  color: #999999;
+  font-size: 14px;
+  margin-top: 10rpx;
+  box-sizing: border-box;
+}
+
+.Settlement{
+  flex: 4;
+  background: red;
+  color: white;
+  text-align: center;
+  height: 100%;
+  line-height: 100rpx;
 }
