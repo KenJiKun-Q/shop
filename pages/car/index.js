@@ -5,7 +5,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    address:{},
+    goods:null
   },
 
   /**
@@ -15,52 +16,27 @@ Page({
 
   },
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
+  onShow(){
+    //每次打开页面的时候都在本地获取购物车的数据
+    let goods = wx.getStorageSync("goods") || null;
 
+    this.setData({
+      goods
+    })
   },
 
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+  hanldeAddress(){
+    wx.chooseAddress({
+      success:(res) => {
+        //设置收货地址
+        this.setData({
+          address:{
+            userName:res.userName,
+            telNumber:res.telNumber,
+            detail:res.provinceName + res.cityName + res.countyName + res.detailInfo
+          }
+        })
+      }
+    })
   }
 })

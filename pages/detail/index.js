@@ -43,6 +43,10 @@ Page({
       goods_small_logo
       } = this.data.detail
 
+    //判断是否有相同的商品,有就数量+1到购物车
+    let number = goods[goods_id] ? goods[goods_id].number + 1: 1;
+
+
     // number 和 selected是自定义的数据
     goods[goods_id] = {
       goods_id,
@@ -50,7 +54,7 @@ Page({
       goods_name,
       goods_small_logo,
 
-      number:1,
+      number,
       selected:true
     }
 
