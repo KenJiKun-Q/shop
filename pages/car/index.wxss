@@ -1,3 +1,8 @@
+/* 没有地址的部分 */
+.not-address{
+  padding: 20rpx;
+}
+
 /* 地址部分 */
 
 .addressInfo{
@@ -111,50 +116,46 @@
 
 
 /* 底部按钮 */
-.footer-nav{
+.footer{
   display: flex;
   width: 100%;
   height: 100rpx;
+  justify-items: center;
   position: fixed;
-  bottom: 0rpx;
-  left: 0rpx;
-  background: #fff;
+  bottom: 0;
+  left: 0;
+  border-top: 1px #ddd solid;
 }
 
-.all{
-  flex: 4;
-  margin: auto 0;
+.allSelect{
+  text-align: center;
+  flex: 3;
+  line-height: 100rpx;
 }
 
-.all icon{
-  padding: 0 30rpx;
-}
-
-.all-price{
-  flex: 4;
-  margin: auto;
-}
-
-.all-content{
-  display: flex;
+.allSelect icon{
+  margin-right: 20rpx;
 }
 
 .allPrice{
+  flex: 5;
+  padding: 0 20rpx;
+}
+
+.allPrice text{
+  margin-left:40rpx;
   color: red;
 }
 
-.express{
+.allPrice view:last-child{
+  font-size: 12px;
   color: #999999;
-  font-size: 14px;
   margin-top: 10rpx;
-  box-sizing: border-box;
 }
 
-.Settlement{
+.checkout{
   flex: 4;
-  background: red;
-  color: white;
   text-align: center;
-  height: 100%;
+  background: red;
   line-height: 100rpx;
 }

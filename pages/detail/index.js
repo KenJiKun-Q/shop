@@ -33,5 +33,29 @@ Page({
     })
   },
 
-  
+  hanldeAddCart(){
+    let goods = wx.getStorageSync("goods") || {}
+    // 将detail解析数据
+    let{
+      goods_id, 
+      goods_price, 
+      goods_name, 
+      goods_small_logo
+      } = this.data.detail
+
+    // number 和 selected是自定义的数据
+    goods[goods_id] = {
+      goods_id,
+      goods_price,
+      goods_name,
+      goods_small_logo,
+
+      number:1,
+      selected:true
+    }
+
+    // 保存数据到本地
+    wx.setStorageSync("goods",goods)
+  }  
 })
+

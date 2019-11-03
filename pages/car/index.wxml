@@ -1,7 +1,15 @@
-<view class="addressInfo">
+<!-- 没收货信息 -->
+<view class="not-address">
+  <view>点击获取收货地址</view>
+</view>
+
+
+<!-- 有收货信息 -->
+<view class="address-info" wx:if="{{false}}">
+  <view class="addressInfo">
   <view class="content">
-    <view class="addressName">收货人: 王晓东</view>
-    <view class="addressPhone">联系电话: 13800000000
+    <view class="addressName">收货人: 往</view>
+    <view class="addressPhone"> 13800000000
       <text> > </text>
     </view>
   </view>
@@ -14,6 +22,7 @@
  mode="aspectFill" 
  src="../../images/cart_border@2x.png" 
  class="subfield"></image>
+</view>
 
 <view class="live">
   <view class="iconfont icon-dianpu" style="font-size:17px"></view>
@@ -45,94 +54,18 @@
   </view>
 </view>
 
-<view class="cart-list">
-  <view class="font-icon">
-    <icon type="success" size="15"></icon>
-  </view>
-  <view class="cart-Trade">
-    <image
-     mode="aspectFill" 
-     src="https://t00img.yangkeduo.com/goods/images/2018-12-03/c3af8ddf0744c071be4a6e958094545f.jpeg">
-    </image>
-    <view class="box-Config">
-      <view class="trade-title">卡拉胶收到了卡视角阿卡丽四大皆空拉丝机打卡拉斯卡拉斯科栏点击</view>
-      <view class="price-Config">
-        <view class="trade-price">￥279.00</view>
-        <view class="amount">
-          <view class="reduce">-</view>
-          <view class="number">3</view>
-          <view class="add">+</view>
-        </view>
-      </view>
-    </view>
-  </view>
-</view>
-
-<view class="cart-list">
-  <view class="font-icon">
-    <icon type="success" size="15"></icon>
-  </view>
-  <view class="cart-Trade">
-    <image
-     mode="aspectFill" 
-     src="https://t00img.yangkeduo.com/goods/images/2018-12-03/c3af8ddf0744c071be4a6e958094545f.jpeg">
-    </image>
-    <view class="box-Config">
-      <view class="trade-title">卡拉胶收到了卡视角阿卡丽四大皆空拉丝机打卡拉斯卡拉斯科栏点击</view>
-      <view class="price-Config">
-        <view class="trade-price">￥279.00</view>
-        <view class="amount">
-          <view class="reduce">-</view>
-          <view class="number">3</view>
-          <view class="add">+</view>
-        </view>
-      </view>
-    </view>
-  </view>
-</view>
-
-<view class="cart-list">
-  <view class="font-icon">
-    <icon type="success" size="15"></icon>
-  </view>
-  <view class="cart-Trade">
-    <image
-     mode="aspectFill" 
-     src="https://t00img.yangkeduo.com/goods/images/2018-12-03/c3af8ddf0744c071be4a6e958094545f.jpeg">
-    </image>
-    <view class="box-Config">
-      <view class="trade-title">卡拉胶收到了卡视角阿卡丽四大皆空拉丝机打卡拉斯卡拉斯科栏点击</view>
-      <view class="price-Config">
-        <view class="trade-price">￥279.00</view>
-        <view class="amount">
-          <view class="reduce">-</view>
-          <view class="number">3</view>
-          <view class="add">+</view>
-        </view>
-      </view>
-    </view>
-  </view>
-</view>
-
 </view>
 
 <!-- 多选结算 -->
-<view class="footer-nav">
-  <view class="all">
-    <icon type="success" size="15"></icon>
-    全选
+<view class="footer">
+  <view class="allSelect ">
+    <icon type="success" size="14"></icon>全选
   </view>
-  <view class="all-price">
-    <view class="all-content">
-      <view class="all-left">
-        <view>合计:</view>
-        <view class="express">包含运费</view>
-      </view>
-      <view class="allPrice">￥279.00</view>
-    </view>
-    
+
+  <view class="allPrice">
+    <view>合计: <text>￥279.00</text></view>
+    <view>包含运费</view>
   </view>
-  <view class="Settlement">
-    结算(3)
-  </view>
+
+  <view class="checkout">结算</view>
 </view>
