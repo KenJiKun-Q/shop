@@ -1,29 +1,24 @@
 <!-- 没收货信息 -->
 <view class="not-address" wx:if="{{!address.userName}}">
-  <view
-   bindtap="hanldeAddress"
-   >点击获取收货地址</view>
+  <view bindtap="hanldeAddress">点击获取收货地址</view>
 </view>
 
 
 <!-- 有收货信息 -->
 <view class="address-info" wx:if="{{address.userName}}">
   <view class="addressInfo">
-  <view class="content">
-    <view class="addressName">收货人: {{address.userName}}</view>
-    <view class="addressPhone"> {{address.telNumber}}
-      <text> > </text>
+    <view class="content">
+      <view class="addressName">收货人: {{address.userName}}</view>
+      <view class="addressPhone"> {{address.telNumber}}
+        <text> > </text>
+      </view>
+    </view>
+    <view class="address">
+      收货地址: {{address.detail}}
     </view>
   </view>
-  <view class="address">
-    收货地址: {{address.detail}}
-  </view>
-</view>
 
-<image
- mode="aspectFill" 
- src="../../images/cart_border@2x.png" 
- class="subfield"></image>
+  <image mode="aspectFill" src="../../images/cart_border@2x.png" class="subfield"></image>
 </view>
 
 <view class="live">
@@ -32,40 +27,64 @@
 </view>
 
 <!-- 购物车产品列表 -->
-<view class="shop-list" wx:for="{{goods}}" wx:key="{{index}}">
-  <view class="cart-list">
-  <view class="font-icon">
-    <icon type="success" size="15"></icon>
-  </view>
-  <view class="cart-Trade">
-    <image
-     mode="aspectFill" 
-     src="{{item.goods_small_logo}}">
-    </image>
-    <view class="box-Config">
-      <view class="trade-title">{{item.goods_name}}</view>
-      <view class="price-Config">
-        <view class="trade-price">￥{{item.goods_price}}</view>
-        <view class="amount">
-          <view class="reduce">-</view>
-          <view class="number">{{item.number}}</view>
-          <view class="add">+</view>
+<view class="goods-list">
+  <view class="shop-list" wx:for="{{goods}}" wx:key="{{index}}">
+    <view class="cart-list">
+      <view class="font-icon">
+        <icon
+         type="success" 
+         size="15"
+         color="{{item.selected ? 'red' : 'gray'}}"
+         bindtap="hanldeSelected"
+         data-id="{{item.goods_id}}"></icon>
+      </view>
+      <view class="cart-Trade">
+        <image mode="aspectFill" src="{{item.goods_small_logo}}">
+        </image>
+        <view class="box-Config">
+          <view class="trade-title">{{item.goods_name}}</view>
+          <view class="price-Config">
+            <view class="trade-price">￥{{item.goods_price}}</view>
+            <view class="amount">
+              <view
+               class="reduce" 
+               bindtap="handleReduce" 
+               data-id="{{item.goods_id}}">-</view>
+
+              <input
+               value="{{item.number}}"
+               bindchange="bindChange"
+               bindinput="bindInput"
+               data-id="{{item.goods_id}}"
+               type="tel"></input>
+
+              <view
+               class="add" 
+               bindtap="handleAdd" 
+               data-id="{{item.goods_id}}">+</view>
+            </view>
+          </view>
         </view>
       </view>
     </view>
   </view>
-</view>
 
 </view>
 
 <!-- 多选结算 -->
 <view class="footer">
-  <view class="allSelect ">
-    <icon type="success" size="14"></icon>全选
+  <view class="allSelect"
+        bindtap="handleAllSelectedEvent">
+    <icon
+     type="success" 
+     size="14"
+     color="{{allSelected ? 'red' : 'gray'}}"></icon>全选
   </view>
 
   <view class="allPrice">
-    <view>合计: <text>￥279.00</text></view>
+    <view>合计:
+      <text>￥{{allPrice}}</text>
+    </view>
     <view>包含运费</view>
   </view>
 
